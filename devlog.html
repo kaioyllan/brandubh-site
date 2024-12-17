@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog - Brandubh</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #dfdfdf;
+        }
+
+        h1 {
+            text-align: center;
+            color: #dfdfdf;
+            margin-top: 50px;
+        }
+
+        .devlog {
+            background-color: #111111;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 900px;
+            border: 2px solid #833131;
+            border-radius: 10px;
+        }
+
+        .devlog h2 {
+            color: #dfdfdf;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .devlog ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .devlog li {
+            margin: 10px 0;
+        }
+
+        .devlog li span {
+            font-weight: bold;
+            color: #aa2626;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #833131;
+            color: #dfdfdf;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            max-width: 200px;
+            border: none;
+        }
+
+        .back-btn:hover {
+            background-color: #dfdfdf;
+            color: #833131;
+        }
+
+        footer {
+            background-color: #111111;
+            color: #dfdfdf;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+        .imagem{
+
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 640px;
+            border: 3px solid #833131;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Título -->
+    <h1>DEVLOG - Brandubh</h1>
+
+    <!-- Devlog -->
+    <div class="devlog">
+        <h2>Atualizações Recentes</h2>
+        <ul>
+            <li><span>17/12/2024 - Lançamento Oficial do Site: </span>Após um pequeno tempo de trabalho, o site oficial de Brandubh está no ar! Trazendo uma navegação simples e clara para todos possam acompanhar o progresso do projeto.
+            Agora, todas as atualizações, noticias e conteúdos exclusivos estarão ao alcance de todos.</li>
+            <li><span>17/12/2024 - Conclusão do Primeiro Ato!: </span> Estou animado para compartilhar que estou chegando ao final do primeiro Ato 1 (🪦Sussuros de cura) do meu projeto BRANDUBH!
+            A jornada tem sido incrivel até agora, com muitos desafios e aprendizados ao longo do caminho.
+        Concluir essa parte do desenvolvimento foi um marco importante. Além disso, estou super feliz em anunciar que o site oficial do Brandubh está finalmente no AR!
+    Agora toda é mais fácil do que nunca para acompanhar o progresso do projeto e ficar por dentro das novidades. Fiquem Ligados.</li>
+              
+            <li><span>IMAGEM: </span> Veja uma pequena imagem do projeto atualmente.</li>
+            <img src="https://i.imgur.com/2ejiYrE.png" alt="Imagem do jogo Brandubh" class="imagem">
+
+    <h1>Brandubh - Soundtrack</h1>
+
+    <audio id="audioPlayer" controls>
+        <source id="audioSource" src="{{ url_for('static', filename='audio/Secunda.mp3') }}" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <!-- Lista de músicas -->
+    <ul>
+        <li><button onclick="playSong('audio/Secunda.mp3')">🎵 Secunda</button></li>
+        <li><button onclick="playSong('audio/snd_bunnies.mp3')">🎵 Bunnies</button></li>
+        <li><button onclick="playSong('audio/snd_criteracrazy.mp3')">🎵 Critera Crazy</button></li>
+    </ul>
+
+    
+        </ul>
+        <script>
+            function playSong(songPath) {
+                const audioPlayer = document.getElementById('audioPlayer');
+                const audioSource = document.getElementById('audioSource');
+        
+                // Altere o caminho do arquivo de áudio
+                audioSource.src = "{{ url_for('static', filename='') }}" + songPath;
+        
+                // Recarrega o player e começa a tocar
+                audioPlayer.load();
+                audioPlayer.play();
+            }
+        </script>
+        
+
+    </div>
+
+    <!-- Botão de Voltar -->
+    <a href="/" class="back-btn">Home</a>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Brandubh. Todos os direitos reservados.</p>
+        <p>Feito com ❤️ por Kaioyllan</p>
+    </footer>
+</body>
+</html>
