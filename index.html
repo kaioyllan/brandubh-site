@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Brandubh</title>
+    <link rel="icon" href="static/favicon_io/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #2B2323; /* Marrom escuro do fundo da imagem */
+            color: #D6C7A1; /* Bege claro da imagem */
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            overflow: hidden;
+            padding-top: 80px
+        }
+    
+        /* Barra de navegação */
+        .navbar {
+            background-color: #3D2E2E; /* Marrom médio */
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            
+        }
+    
+        .navbar a {
+            color: #D6C7A1; /* Bege claro */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+    
+        .navbar a:hover {
+            color: #9E8472; /* Bege mais escuro */
+        }
+    
+        /* Título */
+        h1 {
+            color: #C39A6D; /* Bege dourado */
+            font-size: 50px;
+            margin: 20px 0;
+        }
+    
+        /* Imagem */
+        img {
+            max-width: 80%;
+            margin: 20px 0;
+            border: 3px solid #C39A6D; /* Bege dourado */
+            border-radius: 10px;
+        }
+    
+        /* Descrição */
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 20px auto;
+            max-width: 700px;
+            color: #D6C7A1; /* Bege claro */
+        }
+    
+        /* Botões */
+        .button-container a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: #2B2323; /* Marrom escuro */
+            background-color: #C39A6D; /* Bege dourado */
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+    
+        .button-container a:hover {
+            background-color: #9E8472; /* Bege escuro */
+            color: #D6C7A1; /* Bege claro */
+        }
+    
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #9E8472; /* Bege mais escuro */
+        }
+    
+        /* Efeito de pétalas caindo */
+        .petal {
+            position: absolute;
+            top: -10%;
+            animation: cair 10s infinite ease-in-out;
+            z-index: -1;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        
+        @keyframes cair {
+            0% {
+                transform: translateX(0) rotate(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(50px) rotate(180deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateX(-50px) translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    
+        /* Pétalas diferentes */
+        .petal1 {
+            width: 30px;
+            height: 30px;
+            background-color: #C39A6D; /* Bege dourado */
+            border-radius: 50%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+    
+        .petal2 {
+            width: 20px;
+            height: 20px;
+            background-color: #3D2E2E; /* Marrom médio */
+            border-radius: 50%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+    
+        .petal3 {
+            width: 25px;
+            height: 25px;
+            background-color: #9E8472; /* Bege mais escuro */
+            border-radius: 50%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <div class="navbar">
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/devlog">Devlog</a>
+    </div>
+
+    <!-- Efeito de pétalas caindo -->
+    <div id="petals"></div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>BRANDUBH</h1>
+        <img src="https://i.imgur.com/juVPn9f.png" alt="Imagem principal do jogo">
+        <p>
+            Bem-vindo a Brandubh, um mundo viking repleto de mistério e escuridão.
+            Nesta aventura épica, você assumirá o papel de Stein Magnussen, um jovem destemido em busca de e honra.
+        </p>
+      
+        
+    </div>
+    <!-- Seção de Download -->
+<section id="download" style="text-align: center; padding: 50px 0; background-color:#2B2323; color: #F2E2C4;">
+    <h2>Baixe Brandubh</h2>
+    
+    
+    <!-- Área de informações sobre a versão -->
+    <div style="margin-bottom: 20px;">
+        <strong>Versão Atual:</strong> 1.0.0 <br>
+        <small>Última atualização: 04/02/2025</small>
+    </div>
+    
+    <!-- Botão de Download -->
+    <a href="https://drive.google.com/file/d/1nspbazApr0Bru68l1fFdQ-lETTTYLurF/view?usp=sharing" download>
+        <button style="padding: 15px 30px; background-color: #FFD700; color: #2B2323;; border: none; font-size: 16px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+            📥 Baixar Jogo
+        </button>
+    </a>
+    
+    <!-- Aviso sobre requisitos -->
+    <p style="margin-top: 10px; font-size: 12px; color: #F2E2C4;">
+        * O jogo está disponível para Windows. Outras plataformas em breve.
+    </p>
+</section>
+
+    
+    <!-- Rodapé -->
+    <footer>
+        © 2024 Brandubh. Todos os direitos reservados. Feito com ❤️ por Kaioyllan
+    </footer>
+
+    <script>
+        // Função para gerar pétalas dinamicamente
+        function generatePetals() {
+            const petalsContainer = document.getElementById('petals');
+            const numPetals = 50; // Número de pétalas
+
+            for (let i = 0; i < numPetals; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('petal');
+
+                // Aleatorizar tipo de petala
+                const petalType = Math.floor(Math.random() * 3) + 1;
+                petal.classList.add(`petal${petalType}`);
+
+                // Posição aleatória
+                petal.style.left = `${Math.random() * 100}%`;
+
+                // Tempo de animação aleatório
+                petal.style.animationDuration = `${Math.random() * 5 + 8}s`; // Varia de 8s a 13s
+                petal.style.animationDelay = `${Math.random() * 5}s`; // Varia de 0s a 5s
+
+                petalsContainer.appendChild(petal);
+            }
+        }
+
+        // Chama a função para gerar as pétalas
+        generatePetals();
+    </script>
+
+
+</body>
+
+</html>
