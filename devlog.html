@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Brandubh - Devlog</title>
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            color: #F2E2C4; /* Bege claro */
+            padding: 0;
+            background-color: #2B2323; /* Marrom escuro */
+            background-size: 300% 300%;
+            animation: animarFundo 10s infinite;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px; /* Menor tamanho de fonte */
+           
+            letter-spacing: 1px; /* Menor espaçamento entre letras */
+            line-height: 1.3; /* Menor espaçamento entre linhas */
+        }
+    
+        @keyframes animarFundo {
+            0% {
+                background-position: 0% 50%;
+            }
+    
+            50% {
+                background-position: 100% 50%;
+            }
+    
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        /* Barra de navegação */
+        .navbar {
+            background-color: #3D2E2E; /* Laranja queimado */
+            padding: 15px 0px; /* Menos padding */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .navbar a {
+            color: #F2E2C4; /* Bege claro */
+            text-decoration: none;
+            margin: 0 8px; /* Menos margem */
+            font-size: 14px; /* Tamanho ainda menor */
+            transition: color 0.3s;
+        }
+    
+        .navbar a:hover {
+            color: #FFD700; /* Dourado */
+        }
+    
+        /* Conteúdo principal */
+        .content {
+            margin: 70px auto 10px; /* Menos espaço para a barra */
+            padding: 20px; /* Menos padding */
+            max-width: 900px;
+            background-color: #27201d; /* Marrom médio */
+            border-radius: 8px; /* Bordas mais suaves */
+            border: 2px solid #633e06; /* Dourado */
+        }
+    
+        h1 {
+            text-align: center;
+            color: #F2E2C4; /* Bege claro */
+            margin-top: 20px;
+            font-size: 20px; /* Tamanho reduzido */
+        }
+    
+        .devlog h2 {
+            text-align: center;
+            margin: 15px 0; /* Menos margem */
+            color: #F2E2C4; /* Bege claro */
+            font-size: 16px; /* Tamanho menor */
+        }
+    
+        .devlog ul {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .devlog li {
+            margin: 10px 0; /* Menos margem */
+            font-size: 12px; /* Tamanho reduzido */
+        }
+    
+        .devlog li span {
+            font-weight: bold;
+            color: #968611; /* Dourado */
+        }
+    
+        img {
+            display: block;
+            margin: 15px auto; /* Menos margem */
+            max-width: 100%;
+            border: 2px solid #A35230; /* Laranja queimado */
+            border-radius: 8px; /* Bordas mais suaves */
+            animation: flutuar 5s ease-in-out infinite;
+        }
+    
+        @keyframes flutuar {
+            0% {
+                transform: translateY(0);
+            }
+    
+            50% {
+                transform: translateY(-5px); /* Menos movimento */
+            }
+    
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        .back-btn {
+            display: inline-block;
+            margin: 10px auto; /* Menos margem */
+            padding: 6px 16px; /* Menos padding */
+            color: #6B4E42; /* Marrom médio */
+            background-color: #FFD700; /* Dourado */
+            text-decoration: none;
+            font-size: 10px; /* Menor tamanho de fonte */
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+    
+        .back-btn:hover {
+            background-color: #FF9F45; /* Laranja outonal */
+            color: #F2E2C4; /* Bege claro */
+        }
+    
+        footer {
+            background-color: transparent;
+            color: #F2E2C4; /* Bege claro */
+            text-align: center;
+            font-size: 7px; /* Menor tamanho de fonte */
+            padding: 8px;
+            margin-top: 20px; /* Menos margem */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <div class="navbar">
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>DEVLOG - Brandubh</h1>
+        <div class="devlog">
+            <h2>Atualizações Recentes</h2>
+            <ul>
+                <li><span>17/12/2024 - Lançamento Oficial do Site: </span>Após um pequeno tempo de trabalho, o site oficial de Brandubh está no ar!...</li>
+                <li><span>17/12/2024 - Conclusão do Primeiro Ato!: </span>Estou animado para compartilhar que a conclusão do primeiro ato SUSSUROS DE CURA está sendo concluido!</li>
+                <li><span>3/11/2023 - Devlog 1: </span>Olá a todos! É realmente impressionante pensar que já se passou 1 ano de desenvolvimento de Brandubh. Agradeço a todos por ter uma grande paciência de esperar tanto tempo por uma atualização, mas estamos aqui, não é? Como na nota anterior em nosso discord, estou realizando alterações significativas no enredo e no sistema de diálogo do jogo. Essas mudanças foram extensas e necessárias para dar forma a uma experiência coesa.
+
+                    O sistema de diálogo é o ponto principal do projeto, inseparável do enredo. Ambos se complementam, entrelaçados, e agora tenho o prazer de informar que consegui a harmonia tão aguardada. A história e o sistema de diálogo funcionam em perfeita sintonia, impulsionando um ao outro para criar uma experiência de jogo única.
+                    
+                    E sendo sincero, estou empolgado em compartilhar esse progresso com vocês, e em breve poderemos mostrar como essas mudanças transformarão a experiência de jogar Brandubh.
+                    
+                </li>
+                <li><span>IMAGEM: </span> Veja uma pequena imagem do projeto atualmente.</li>
+                <img src="https://i.imgur.com/2ejiYrE.png" alt="Imagem do jogo Brandubh">
+                <li><span>1 Ano atrás: </span>Bom, acho que não estava tão legal..</li>
+                <img src="https://i.imgur.com/bp49llv.png" alt="Imagem do jogo antigo">
+            </ul>
+            <h3>É isso! Estou realmente ansioso para compartilhar os avanços com vocês. Obrigado por acompanhar essa jornada, e espero trazer mais novidades em breve.</h3>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Brandubh. Todos os direitos reservados.</p>
+        <p>Feito com ❤️ por Kaioyllan</p>
+    </footer>
+</body>
+
+</html>
