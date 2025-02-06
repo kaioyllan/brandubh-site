@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Brandubh - Sobre</title>
+    <style>
+        body {
+            height: 100vh; /* Faz o fundo ocupar toda a tela */
+            background: #2B2323;
+            background-size: 300% 300%;
+            animation: animarFundo 10s infinite;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            color: #dfdfdf;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes animarFundo {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Barra de navegação fixa */
+        .navbar {
+            background-color: #3D2E2E; /* Laranja queimado */
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: #F2E2C4; /* Bege claro */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #FFD700; /* Dourado */
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            color: #F2E2C4;
+            margin-top: 80px; /* Espaço para a barra fixa */
+        }
+
+        /* Conteúdo principal */
+        .content {
+            opacity: 0; /* Inicialmente invisível */
+            animation: fadeIn 2s ease-in forwards; /* Define a animação */
+            background-color:#2B2323;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 900px;
+            border: 2px solid #FF9F45;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0; /* Totalmente invisível */
+                transform: scale(0.9); /* Leve redução no tamanho */
+            }
+
+            100% {
+                opacity: 1; /* Totalmente visível */
+                transform: scale(1); /* Tamanho original */
+            }
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content strong {
+            color: #FFD700; /* Dourado */
+        }
+
+        .back-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #FF9F45;
+            color: #dfdfdf;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            max-width: 200px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #dfdfdf;
+            color:#2B2323;
+        }
+
+        footer {
+            color: #dfdfdf;
+            text-align: center;
+            margin-top: 50px;
+            padding: 10px;
+            font-size: 8px;
+            text-shadow: 2px 2px 0px #000; /* Efeito de sombra para destacar */
+            letter-spacing: 1px; /* Espaçamento entre letras */
+        }
+
+        .flutuante {
+            animation: flutuar 5s ease-in-out infinite;
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 640px;
+            border: 3px solid #FF9F45;
+            border-radius: 10px;
+        }
+
+        @keyframes flutuar {
+            0% {
+                transform: translateY(0); /* Começa na posição original */
+            }
+
+            50% {
+                transform: translateY(-7px); /* Sobe um pouco */
+            }
+
+            100% {
+                transform: translateY(0); /* Retorna à posição original */
+            }
+        }
+    
+        /* Estilização Geral */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #2B2323;
+            color: #F2E2C4;
+        }
+
+        /* Títulos */
+        section h2 {
+            font-size: 36px;
+            color:  #968611;
+            margin-bottom: 20px;
+        }
+
+        /* Personagens */
+        .character-container, .team-container, .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .character, .team-member, .testimonial {
+            max-width: 250px;
+            background: #A35230;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .character img, .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .character h3, .team-member h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #b49c13;
+        }
+
+        /* Depoimentos */
+        .testimonial {
+            font-style: italic;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #FFD700;
+        }
+        #audio-controls {
+    display: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegação fixa -->
+    <div class="navbar">
+        <a href="/">Inicio</a>
+        <a href="/devlog">Devlog</a>
+       
+    </div>
+    <audio id="background-music" autoplay loop>
+        <source src="static/audio/Secunda.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <!-- Título -->
+    <h1>Sobre Brandubh</h1>
+    <!-- Seção: Equipe -->
+<section class="team">
+    <h2>Equipe por Trás de Brandubh</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <h3>Kaioyllan</h3>
+            <p>Desenvolvedor principal. Responsável por trazer Brandubh à vida.</p>
+        </div>
+        <div class="team-member">
+          
+            <h3>Pedro Paulo</h3>
+            <p>Designer de Niveis</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Seção de Conteúdo -->
+    <div class="content">
+        <p>
+            <strong>Brandubh</strong> é um projeto independente que combina elementos de narrativa interativa, jogabilidade e atmosfera imersiva. Inspirado em jogos clássicos e modernas experiências narrativas, o objetivo é criar um jogo que ressoe emocionalmente com os jogadores.
+        </p>
+        <p>
+            O jogo está sendo desenvolvido com foco em entregar uma experiência única, onde cada decisão afeta o desenrolar da história. <strong>Brandubh</strong> explora temas como sacrifício, moralidade e a dualidade da natureza humana.
+        </p>
+        <p>
+            O desenvolvimento é liderado por Kaioyllan e Pedro Paulo, que tem se dedicado ao longo dos últimos dois anos para garantir que cada aspecto, desde os sistemas de diálogo até a trilha sonora, esteja alinhado com a visão do projeto.
+        </p>
+        <p>
+            Com um mundo rico em detalhes e personagens profundos, <strong>Brandubh</strong> promete entregar uma jornada inesquecível para os jogadores.
+        </p>
+        <!-- Seção: Personagens Principais -->
+<section class="characters">
+    <h2>Personagens Principais</h2>
+    <div class="character-container">
+        <div class="character">
+            
+            <h3>Stein Magnussen</h3>
+            <p>Stein é um bom irmão, ele ama sua famila e faria de tudo por ela.</p>
+        </div>
+        <div class="character">
+            
+            <h3>Gunnar Magnussen</h3>
+            <p>Gunnar é o irmão mais velho de Stein, mas teve uma criação diferente e possui uma visão diferente do Stein sobre o mundo.</p>
+        </div>
+        <div class="character">
+            
+            <h3>Lorde Aric</h3>
+            <p>Lorde aric é o governante da vila de Brandubh onde Stein e Gunnar habitam, ele possui um papel muito importante em manter a paz da vila.</p>
+        </div>
+    </div>
+</section>
+        <img src="https://i.imgur.com/2ejiYrE.png" alt="Imagem do jogo Brandubh" class="flutuante">
+    </div>
+    
+    <!-- Seção: Depoimentos -->
+<section class="testimonials">
+    <h2>O Que Jogadores Dizem</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <p>"A ambientação de Brandubh é incrível!"</p>
+            <span>— Aryel, Beta Tester</span>
+        </div>
+        <div class="testimonial">
+            <p>"Uma historia com futuro promissor!"</p>
+            <span>— Capkeys, Entusiasta de Jogos</span>
+        </div>
+        <div class="testimonial">
+            <p>"Simplesmente Kyrdubh.."</p>
+            <span>— Luwolf, Um lobo especialista em criticas.</span>
+        </div>
+    </div>
+</section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Brandubh. Todos os direitos reservados.</p>
+        <p>Feito com ❤️ por Kaioyllan</p>
+    </footer>
+    <script>
+        window.addEventListener('load', () => {
+            const music = document.getElementById('background-music');
+            if (music) {
+                music.volume = 0.3; // Ajusta o volume inicial
+            }
+        });
+    </script>
+    
+</body>
+
+</html>
